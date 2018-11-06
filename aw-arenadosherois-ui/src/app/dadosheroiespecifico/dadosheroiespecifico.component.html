@@ -1,0 +1,43 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h1>Pesquisar dados de Herói</h1>
+  </div>
+</div>
+<form autocomplete="off" #frm="ngForm" (ngSubmit)="pesquisarHeroi(frm)">
+<div class="ui-g">
+  <div class="ui-g-2">
+    <label>
+      Id
+    </label>
+    <input pInputText id="id" name="id" [(ngModel)] = "heroi.id"/>
+  </div>
+  <div class="ui-g-2">
+    <button pButton label="Pesquisar" icon="pi pi-search"></button>
+  </div>
+</div>
+</form>
+<div class="ui-g">
+  <div class="ui-g-8">
+    <p-panel >
+      <p-header align="center">
+          <h2>{{heroi.alterego}}</h2>
+      </p-header>
+        <div class = "ui-g">
+          <div class = "ui-g-6">
+            <p>Nome: {{heroi.nome}}</p>
+            <p>Cor: {{heroi.cores}}</p>
+            <p>Poder: {{heroi.poder}}</p>
+            <p>Criador: {{heroi.criador}}</p>
+            <p>Nemesis: {{heroi.nemesis}}</p>
+          </div>
+          <div class = "ui-g-6">
+            <img class="logo" src="./../../assets/imagens/{{heroi.caminhofigura}}.png" />
+          </div>
+        </div>
+          
+      <p-footer>
+        <p>{{heroi.sinopse}}</p>
+      </p-footer>
+    </p-panel>
+  </div>
+</div>

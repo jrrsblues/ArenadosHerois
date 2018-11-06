@@ -1,0 +1,39 @@
+<div class="ui-g">
+    <div class="ui-g-11">
+  <div class="ui-g">
+    <div class="ui-g-8 ui-fluid">
+      <p-table [value]="herois" responsive="true">
+         <ng-template pTemplate="body" let-heroi>
+             <tr>
+                 <td>
+                        <p-panel> 
+                            <p-header>
+                              <b>{{heroi.alterego}}</b> 
+                            </p-header>
+                            <div class="ui-g">
+                                <div class="ui-g-4 ui-fluid">
+                                    <img class="logo" src="./../../assets/imagens/{{heroi.caminhofigura}}.png" />
+                                </div>
+                                <div class="ui-g-4 ui-fluid">
+                                    <p>Nome: {{heroi.nome}}</p>
+                                    <p>Core(s): {{heroi.cores}}</p>
+                                    <p>Criador: {{heroi.criador}}</p>
+                                    <p>Universo: {{heroi.universo}}</p>
+                                    <p>Data de Criação: {{heroi.datacriacao | date:'dd/MM/yyyy'}}</p>
+                                    <p>Poder:{{heroi.poder}}</p>
+                                    <p>Nemesis: {{heroi.nemesis}}</p>
+                                </div>
+                            </div>
+                            <p-footer>
+                                {{heroi.sinopse}}
+                            </p-footer>
+                        </p-panel>
+                 </td>
+             </tr>
+         </ng-template>
+      </p-table>        
+    </div>
+  </div>
+
+</div>
+</div>

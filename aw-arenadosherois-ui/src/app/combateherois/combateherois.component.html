@@ -1,0 +1,45 @@
+<div class="ui-g">
+  <div class="ui-g-8 ui-g-offset-4">
+    <h1>Arena de Combate</h1>
+  </div>
+</div>
+<form autocomplete="off" #frm="ngForm">
+<div class="ui-g">
+  <div class="ui-g-4">
+      <p-panel >
+          <p-header align="center">
+              <h2>{{oponentes.oponente1}}</h2>
+          </p-header>
+            <div class = "center">
+                <img src="./../../assets/imagens/{{oponentes.caminhofigura1}}.png" />
+            </div>
+          <p-footer>
+            <p><input pInputText id="id1" name="id1" [(ngModel)]="oponentes.id1"/> --> Pontuação: {{oponentes.pontuacao1}} </p>
+          </p-footer>
+        </p-panel>
+  </div>
+  <div class="ui-g-2">
+    <br>
+    <p class="center"><img src="./../../assets/imagens/contra.png" /></p>
+    <p class="center"><button pButton (click)="resultadodacontenda(frm)" label="Iniciar Combate"></button></p>
+  </div>
+  <div class="ui-g-4">
+      <p-panel >
+          <p-header align="center">
+              <h2>{{oponentes.oponente2}}</h2>
+          </p-header>
+            <div class = "center">
+                <img src="./../../assets/imagens/{{oponentes.caminhofigura2}}.png" />
+            </div>
+          <p-footer>
+            <p> --><input pInputText id="id2" name="id2" [(ngModel)]="oponentes.id2"/> Pontuação: {{oponentes.pontuacao2}}</p>
+          </p-footer>
+        </p-panel>
+  </div>
+</div>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h1>O Vencedor deste embate foi: {{vencedor.alterego}}</h1>
+  </div>
+</div>
+</form>

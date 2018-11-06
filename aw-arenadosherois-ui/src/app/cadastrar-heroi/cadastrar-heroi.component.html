@@ -1,0 +1,62 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h1>Cadastro de Herói</h1>
+  </div>
+</div>
+<form autocomplete="off" #frm="ngForm" (ngSubmit)="cadastro(frm)">
+ <div class="ui-g">
+  <div class="ui-g-2 ui-fluid">
+    <label>Alter Ego:</label>
+    <input pInputText id="alterego" name="alterego" [(ngModel)]="heroi.alterego" required #alterego/>
+  </div>
+  <div class="ui-g-6 ui-fluid">
+    <label>Nome:</label>
+    <input pInputText id="nome" name="nome" [(ngModel)]="heroi.nome" required #nome/>
+  </div>
+  <div class="ui-g-2 ui-fluid">
+    <label>Cor:</label>
+    <input pInputText id="cores" name="cores" [(ngModel)]="heroi.cores" required #cores/>
+  </div>
+  <div class="ui-g-2 ui-fluid">
+    <label>Poder:</label>
+    <input pInputText name="poder" id="poder" [(ngModel)]="heroi.poder" required #poder/>
+  </div>
+ </div>
+ <div class="ui-g">
+   <div class="ui-g-3 ui-fluid">
+     <label>Criador:</label>
+     <input pInputText id="criador" name="criador" [(ngModel)]="heroi.criador" required #criador/>
+   </div>
+   <div class="ui-g-2 ui-fluid">
+     <label>Universo:</label>
+     <p-dropdown id="universo" name="universo"
+              [autoWidth]="false" placeholder="Selecione..."
+              [options]="universos" [optionLabel]="universos"
+              [(ngModel)]="heroi.universo"
+              #universo>
+      </p-dropdown>
+    </div>
+   <div class="ui-g-4 ui-fluid">
+     <label>Data de Criação:</label>
+     <p-calendar [(ngModel)]="heroi.datacriacao" dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1950:2010" id="datacriacao" name="datacriacao" required #datacriacao></p-calendar>
+   </div>
+   <div class="ui-g-3 ui-fluid">
+     <label>Nemesis:</label>
+     <input pInputText id="nemesis" name="nemesis" [(ngModel)]="heroi.nemesis" required #nemesis/>
+   </div>
+ </div>
+ <div class="ui-g">
+   <div class="ui-g-10 ui-fluid">
+     <label>Sinopse:</label>
+     <textarea pInputTextarea [(ngModel)]="heroi.sinopse" id="sinopse" name="sinopse" required #sinopse></textarea>
+   </div>
+   
+   <div class="ui-g">
+     <div class="ui-g-2">
+        <br>
+        <br>
+       <button pButton icon="pi pi-check" label="Salvar" [disabled]="frm.invalid"></button>
+     </div>
+   </div>
+ </div>
+</form>

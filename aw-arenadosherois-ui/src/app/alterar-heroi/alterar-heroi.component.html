@@ -1,0 +1,81 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+      <H1>Alterar Dados de Heroi</H1>
+  </div>
+</div>
+<form #frm="ngForm" (ngSubmit)="pesquisardadosheroi(frm)">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <label>
+       Alter Ego
+      </label>
+      <input pInputText id="id" name="id"  [(ngModel)]="heroi.id" required #alterego/>
+    </div>
+  </div> 
+  <div class="ui-g">
+      <div class="ui-g-4 ui-g-offset-1">
+        <button pButton label="Pesquisar"></button>
+      </div>
+  </div>
+</form>
+<div class="ui-g">
+    <div class="ui-g-12">
+        <H1>Alterar Dados de Heroi</H1>
+    </div>
+</div>
+<form #frm1="ngForm" (ngSubmit)="alterarardadosheroi(frm1)">
+    <div class="ui-g">
+        <div class="ui-g-1 ui-fluid">
+            <label>Id:</label>
+            <input pInputText id="id" name="id" [(ngModel)]="heroi.id" required #alterego/>
+        </div>
+        <div class="ui-g-2 ui-fluid">
+          <label>Alter Ego:</label>
+          <input pInputText id="alterego" name="alterego" [(ngModel)]="heroi.alterego" required #alterego/>
+        </div>
+        <div class="ui-g-5 ui-fluid">
+          <label>Nome:</label>
+          <input pInputText id="nome" name="nome" [(ngModel)]="heroi.nome" required #nome/>
+        </div>
+        <div class="ui-g-2 ui-fluid">
+          <label>Cor:</label>
+          <input pInputText id="cores" name="cores" [(ngModel)]="heroi.cores" required #cores/>
+        </div>
+        <div class="ui-g-2 ui-fluid">
+          <label>Poder:</label>
+          <input pInputText name="poder" id="poder" [(ngModel)]="heroi.poder" required #poder/>
+        </div>
+       </div>
+       <div class="ui-g">
+         <div class="ui-g-3 ui-fluid">
+           <label>Criador:</label>
+           <input pInputText id="criador" name="criador" [(ngModel)]="heroi.criador" required #criador/>
+         </div>
+         <div class="ui-g-2 ui-fluid">
+           <label>Universo:</label>
+           <input pInputText id="universo" name="universo" [(ngModel)]="heroi.universo" required #criador/>
+          </div>
+         <div class="ui-g-4 ui-fluid">
+           <label>Data de Criação:</label>
+           <input pInputText id="datacriacao" name="datacriacao" [(ngModel)]="heroi.datacriacao" required #datacriacao/>
+         </div>
+         <div class="ui-g-3 ui-fluid">
+           <label>Nemesis:</label>
+           <input pInputText id="nemesis" name="nemesis" [(ngModel)]="heroi.nemesis" required #nemesis/>
+         </div>
+       </div>
+       <div class="ui-g">
+         <div class="ui-g-9 ui-fluid">
+           <label>Sinopse:</label>
+           <textarea pInputTextarea [(ngModel)]="heroi.sinopse" id="sinopse" name="sinopse" required #sinopse></textarea>
+         </div>
+         
+         <div class="ui-g">
+           <div class="ui-g-2">
+              <br>
+              <br>
+             <button pButton icon="pi pi-check" label="Alterar" [disabled]="frm.invalid"></button>
+           </div>
+         </div>
+       </div>
+  </form>
